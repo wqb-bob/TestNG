@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestAll">
+
+	<test name="final">
+	<parameter name="dbconfig" value="oracle"/>
+		<packages>
+		<package name="test.*" />
+		</packages>
+
+		<groups>
+			<run>
+<!-- 				include excluse 影响 -->
+				<include name="selenium-test" />
+				<exclude name="database" />
+			</run>
+		</groups>
+
+		<classes>
+			<!-- <class name="test.ConfigTest" /> -->
+			<class name="test.GroupClassTest"/>
+<!-- 				<class name="test.NewTest"> -->
+					<!-- <methods> -->
+					<!-- <include name="testEmail"/> -->
+					<!-- </methods> -->
+<!-- 				</class> -->
+		</classes>
+	</test>
+
+	<!-- Run test method on group "selenium" only -->
+	<!-- <test name="selenium"> -->
+	<!-- <groups> -->
+	<!-- <run> -->
+	<!-- <include name="selenium-test" /> -->
+	<!-- </run> -->
+	<!-- </groups> -->
+	<!-- <classes> -->
+	<!-- <class name="com.yiibai.TestSelenium" /> -->
+	<!-- <class name="com.yiibai.TestGroup" /> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+</suite>
+
